@@ -1,0 +1,16 @@
+export const platformSchema = {
+  users: ['id', 'name', 'email', 'phone', 'role', 'verification_status', 'blocked_at'],
+  roles: ['id', 'name'],
+  properties: ['id', 'owner_id', 'builder_id', 'project_id', 'category_id', 'subcategory_id', 'title', 'description', 'price', 'area', 'latitude', 'longitude', 'status', 'moderation_status', 'management_token_hash'],
+  property_categories: ['id', 'name', 'group_name'],
+  property_subcategories: ['id', 'category_id', 'name'],
+  owners: ['id', 'user_id', 'full_name', 'phone', 'email', 'ownership_type'],
+  builders: ['id', 'company_name', 'contact_person', 'phone', 'email', 'rera_number'],
+  projects: ['id', 'builder_id', 'name', 'project_type', 'address', 'rera_number'],
+  bookings: ['id', 'property_id', 'name', 'phone', 'visit_type', 'preferred_at', 'timezone', 'status'],
+  enquiries: ['id', 'property_id', 'name', 'phone', 'email', 'message', 'status'],
+  messages: ['id', 'property_id', 'sender_id', 'receiver_id', 'body', 'created_at'],
+  reports: ['id', 'reporter_id', 'target_type', 'target_id', 'reason', 'status'],
+  blocked_users: ['id', 'blocked_user_id', 'blocked_by', 'reason', 'email', 'phone'],
+  admin_logs: ['id', 'admin_id', 'action', 'target_type', 'target_id', 'reason', 'created_at'],
+};
